@@ -11,63 +11,115 @@
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<style>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+    h2 {
+        background-color: #f79a03;
+        color: rgb(88, 13, 239);
+        padding: 10px;
+        margin: 0;
+    }
 
-        header {
-            text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
+    .treasure {
+        margin-top: 20px;
+    }
 
-        #instructions, #locations, #penalty, #help {
-            background-color: #fff;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: 10px;
-            text-align: center;
-        }
+    #locations,
+    #penalty {
+        margin: 10px;
+        font-weight: bold;
+        background-color: hsl(223, 94%, 51%);
+        padding: 10px;
+        border: 1px solid #091df8;
+    }
 
-        #locations, #penalty {
-            font-weight: bold;
-        }
+    #help {
+        margin: 10px;
+        background-color: hsl(320, 90%, 49%);
+        padding: 10px;
+        border: 1px solid #197e1c;
+    }
 
-        #help {
-            cursor: pointer;
-            color: blue;
-            text-decoration: underline;
-        }
+    p {
+        margin: 0;
+    }
 
-        #help-report {
-            display: none;
-        }
-    </style>
-</head>
+    /* Button styling */
+    button {
+        background-color: #4c08f7;
+        color: rgb(152, 10, 241);
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #d207fb;
+    }
+</style>
+
 <body>
-    <header>
-    <h1>Find the Treasure by Shiva Shaankar Burugugadda</h1>
-    </header>
-<div class="container-fluid">
-    <div>“Click on the locations to search for treasure, beware the traps”</div>
-    <div id="locations">Number of locations checked is zero</div>
-    <div id="Penalty">Penalty is zero</div>
-    <div id="click">Click for help</div>
-    <div id="help">Help repor</div>
+<h2>Find the treasure by Shiva Shankar Burugugadda</h2>
+<div class="treasure">
+    <p>Click on the locations to search for treasure, beware the traps</p>
 </div>
-
+<div id="locations">
+    <p>Number of locations checked is zero</p>
+</div>
+<div id="penalty">
+    <p>Penalty is zero</p>
+</div>
+<div>
+    <p>Click for help</p>
+</div>
+<div id="help">
+    <p>Help report</p>
+</div>
+<div class="container">
+    <div class="image-row d-flex justify-content-center">
+        <div><img id="img0" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img1" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img2" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img3" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img4" width=120 height=100 src="TREASURELOC.jpg"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="image-row d-flex justify-content-center">
+        <div><img id="img5" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img6" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img7" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img8" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img9" width=120 height=100 src="TREASURELOC.jpg"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="image-row d-flex justify-content-center">
+        <div><img id="img10" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img11" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img12" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img13" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img14" width=120 height=100 src="TREASURELOC.jpg"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="image-row d-flex justify-content-center">
+        <div><img id="img15" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img16" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img17" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img18" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img19" width=120 height=100 src="TREASURELOC.jpg"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="image-row d-flex justify-content-center">
+        <div><img id="img20" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img21" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img22" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img23" width=120 height=100 src="TREASURELOC.jpg"></div>
+        <div><img id="img24" width=120 height=100 src="TREASURELOC.jpg"></div>
+    </div>
+</div>
 </body>
+
 </html>
