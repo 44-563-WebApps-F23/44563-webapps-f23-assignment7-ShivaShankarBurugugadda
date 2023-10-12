@@ -1,8 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>"Find the treasure by Shiva Shankar Burugugadda" </title>
-  <meta charset="utf-8">
+<html> <head> <style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color:aqua;
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: rgb(15, 116, 110);
+	  }
+	}
+</style>
+<title>Webapps Assignment-7</title>
+<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -11,115 +28,140 @@
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-<style>
 
-    h2 {     
-        background-color: #f79a03;
-        color: rgb(88, 13, 239);
-        padding: 10px;
-        margin: 0;
-    }
+</head>
 
-    .treasure {
-        margin-top: 20px;
-    }
 
-    #locations,
-    #penalty {
-        margin: 10px;
-        font-weight: bold;
-        background-color: hsl(223, 94%, 51%);
-        padding: 10px;
-        border: 1px solid #091df8;
-    }
-
-    #help {
-        margin: 10px;
-        background-color: hsl(320, 90%, 49%);
-        padding: 10px;
-        border: 1px solid #197e1c;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    /* Button styling */
-    button {
-        background-color: #4c08f7;
-        color: rgb(152, 10, 241);
-        padding: 5px 10px;
-        border: none;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #d207fb;
-    }
-</style>
 
 <body>
-<h2>Find the treasure by Shiva Shankar Burugugadda</h2>
-<div class="treasure">
-    <p>Click on the locations to search for treasure, beware the traps</p>
-</div>
-<div id="locations">
-    <p>Number of locations checked is zero</p>
-</div>
-<div id="penalty">
-    <p>Penalty is zero</p>
-</div>
-<div>
-    <p>Click for help</p>
-</div>
-<div id="help">
-    <p>Help report</p>
-</div>
-<div class="container">
-    <div class="image-row d-flex justify-content-center">
-        <div><img id="img0" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img1" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img2" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img3" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img4" width=120 height=100 src="TREASURELOC.jpg"></div>
+    <h3 class="display-3" style="border: 4px dashed royalblue;" >Find the treasure by Shiva Shankar Burugugadda</h1>
+		
+    <div class="" id="target">
+		<p class="lead" id="search_traps">Click on the locations to search for treasure, beware the traps</p>
+        <p class = "lead" id="locations">Number of locations checked is zero</p>
+        <p class = "lead" id="penalty">Penalty is zero</p>
+        <p class = "lead" id="click_help" onclick="help()">Click for help</p>
+        <p class="lead" id="help">Help report</p>
+	</div>
+    <hr>
+    <h6 class="display-4">game field</h6>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="0" alt="searchlocation" style="width:100px;height:100px;" onclick="check(0)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="1" alt="searchlocation" style="width:100px;height:100px;" onclick="check(1)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="2" alt="searchlocation" style="width:100px;height:100px;" onclick="check(2)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="3" alt="searchlocation" style="width:100px;height:100px;" onclick="check(3)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="4" alt="searchlocation" style="width:100px;height:100px;" onclick="check(4)"></div>
+        </div>
+            <div class="row">
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="5" alt="searchlocation" style="width:100px;height:100px;" onclick="check(5)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="6" alt="searchlocation" style="width:100px;height:100px;" onclick="check(6)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="7" alt="searchlocation" style="width:100px;height:100px;" onclick="check(7)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="8" alt="searchlocation" style="width:100px;height:100px;" onclick="check(8)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="9" alt="searchlocation" style="width:100px;height:100px;" onclick="check(9)"></div>
+        </div>
+            <div class="row">
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="10" alt="searchlocation" style="width:100px;height:100px;" onclick="check(10)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="11" alt="searchlocation" style="width:100px;height:100px;" onclick="check(11)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="12" alt="searchlocation" style="width:100px;height:100px;" onclick="check(12)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="13" alt="searchlocation" style="width:100px;height:100px;" onclick="check(13)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="14" alt="searchlocation" style="width:100px;height:100px;" onclick="check(14)"></div>
+        </div>
+            <div class="row">
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="15" alt="searchlocation" style="width:100px;height:100px;" onclick="check(15)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="16" alt="searchlocation" style="width:100px;height:100px;" onclick="check(16)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="17" alt="searchlocation" style="width:100px;height:100px;" onclick="check(17)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="18" alt="searchlocation" style="width:100px;height:100px;" onclick="check(18)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="19" alt="searchlocation" style="width:100px;height:100px;" onclick="check(19)"></div>
+        </div>
+            <div class="row">
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="20" alt="searchlocation" style="width:100px;height:100px;" onclick="check(20)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="21" alt="searchlocation" style="width:100px;height:100px;" onclick="check(21)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="22" alt="searchlocation" style="width:100px;height:100px;" onclick="check(22)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="23" alt="searchlocation" style="width:100px;height:100px;" onclick="check(23)"></div>
+            <div class="col-md-2"><img src="TREASURELOC.jpg" id="24" alt="searchlocation" style="width:100px;height:100px;" onclick="check(24)"></div>
+        </div>
     </div>
-</div>
-<div class="container">
-    <div class="image-row d-flex justify-content-center">
-        <div><img id="img5" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img6" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img7" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img8" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img9" width=120 height=100 src="TREASURELOC.jpg"></div>
-    </div>
-</div>
-<div class="container">
-    <div class="image-row d-flex justify-content-center">
-        <div><img id="img10" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img11" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img12" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img13" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img14" width=120 height=100 src="TREASURELOC.jpg"></div>
-    </div>
-</div>
-<div class="container">
-    <div class="image-row d-flex justify-content-center">
-        <div><img id="img15" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img16" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img17" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img18" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img19" width=120 height=100 src="TREASURELOC.jpg"></div>
-    </div>
-</div>
-<div class="container">
-    <div class="image-row d-flex justify-content-center">
-        <div><img id="img20" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img21" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img22" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img23" width=120 height=100 src="TREASURELOC.jpg"></div>
-        <div><img id="img24" width=120 height=100 src="TREASURELOC.jpg"></div>
-    </div>
-</div>
+	
+	<div id="button" type="button" class="btn btn-success" onclick="reset()">New Game</div>
 </body>
 
-</html>
+<script>
+  let ids = []
+  for(let i=0;i<25;i++)
+  {
+    ids[i]=i;
+  }
+  let checkCount = 0
+  let penalty = 0
+  let lastCheck = 0
+  let treasureLocation = 5
+  let trapLocation = 18
+  let gameOver = false
+  function check(p)
+  {
+    if(gameOver)
+    {
+      return
+    }
+    const img_id = ids[p]
+    tre_loc_img = document.getElementById(img_id)
+    if(p==treasureLocation)
+    {
+      tre_loc_img.src = "TReasure.jpg"
+      gameOver=true
+      penalty = penalty-3
+    }
+    else if (p== trapLocation)
+    {
+      tre_loc_img.src = "Trap.jpg"
+      gameOver=true
+      penalty=penalty+4
+    }
+    else
+    {
+      tre_loc_img.src="pirate.jpg"
+    }
+    checkCount=checkCount+1
+    penalty=penalty+1
+    loc_text = document.getElementById("locations")
+    loc_text.innerHTML = `Number of locations checked is ${checkCount}`
+    pen_text = document.getElementById("penalty")
+    pen_text.innerHTML=`Penalty is ${penalty}`
+    lastCheck=p
+
+  }
+  function help()
+  {
+    let col = lastCheck%5
+    let row = Math.floor(lastCheck/5)
+
+    let treasureCol = treasureLocation%5
+    let treasureRow = Math.floor(treasureLocation/5)
+
+    let col_diff = Math.abs(col-treasureCol) 
+    let row_diff = Math.abs(row-treasureRow)
+
+    let report = ""
+
+    if(((col_diff<=1)&&(row_diff==0))||((col_diff==0)&&(row_diff<=1)))
+    {
+      report = "Can smell it"
+    }
+    else if(col_diff+row_diff==2)
+    {
+      report = "Close Matie"
+    }
+    else
+    {
+      report = "Step Faster"
+    }
+    penalty=penalty+2
+    pen_text = document.getElementById("penalty")
+    pen_text.innerHTML=`Penalty is ${penalty}`
+    help_text = document.getElementById("help")
+    help_text.innerHTML=`Help report ${report}`
+  }
+
+  </script>
+</html>	
